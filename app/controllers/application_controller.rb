@@ -113,6 +113,8 @@ class ApplicationController < Sinatra::Base
   delete '/tweets/:id/delete' do
     @tweet = Tweet.find_by_id(params[:id])
     @tweet.delete
+
+    redirect '/tweets'
   end
 
   get '/tweets/:id/edit' do
