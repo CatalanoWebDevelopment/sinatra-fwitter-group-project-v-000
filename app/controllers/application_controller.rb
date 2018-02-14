@@ -89,7 +89,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/tweets' do
-    if logged_in?
+    if current_user
       @tweet = Tweet.create(content: params[:content])
       erb :'/tweets/show_tweet'
     else
