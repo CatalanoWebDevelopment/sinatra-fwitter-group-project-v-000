@@ -115,7 +115,7 @@ class ApplicationController < Sinatra::Base
     if logged_in?
       @tweet.delete
       redirect '/tweets'
-    else 
+    else
       redirect "/login"
     end
   end
