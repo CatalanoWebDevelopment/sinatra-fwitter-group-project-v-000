@@ -133,7 +133,7 @@ class ApplicationController < Sinatra::Base
       @tweet.save
       redirect '/tweets'
     else
-      redirect '/tweets/<%= @tweet.id %>/edit'
+      redirect '/tweets/:id/edit'
     end
   end
 
