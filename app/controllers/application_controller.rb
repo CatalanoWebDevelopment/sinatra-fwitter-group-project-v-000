@@ -91,7 +91,7 @@ class ApplicationController < Sinatra::Base
   post '/tweets' do
     if logged_in?
       @tweet = Tweet.create(content: params[:content], user_id: current_user.id)
-      erb :'/tweets/show_tweet'
+      erb :'/tweets/show_tweet' 
     else
       redirect '/login'
     end
