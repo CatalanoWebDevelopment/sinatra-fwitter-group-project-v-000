@@ -90,6 +90,8 @@ class ApplicationController < Sinatra::Base
 
   post '/tweets' do
     @tweet = Tweet.create(params[:content])
+
+    erb :'/tweets/show_tweet'
   end
 
   helpers do
