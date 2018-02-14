@@ -82,7 +82,7 @@ class ApplicationController < Sinatra::Base
 
   def '/tweets/new' do
     if logged_in?
-      erb :'/tweets/new'
+      erb :'/tweets/create_tweet'
     else
       redirect '/login'
     end
