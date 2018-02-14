@@ -131,10 +131,12 @@ class ApplicationController < Sinatra::Base
     if @tweet.valid?
       @tweet.update(content: params[:content])
       @tweet.save
+      redirect '/tweets'
     else
       redirect '/tweets/<%= @tweet.id %>/edit'
+    end
 
-    redirect '/tweets'
+    
   end
 
   helpers do
