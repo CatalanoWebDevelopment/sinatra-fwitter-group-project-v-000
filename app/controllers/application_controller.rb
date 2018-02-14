@@ -128,8 +128,8 @@ class ApplicationController < Sinatra::Base
 
   patch '/tweets/:id' do
     @tweet = Tweet.find_by_id(params[:id])
+    @tweet.update(content: params[:content])
     if @tweet.valid?
-      @tweet.update(content: params[:content])
       @tweet.save
       redirect '/tweets'
     else
