@@ -3,4 +3,6 @@
 <%= @tweet.content %>
 
 <h3>Edit Here: </h3>
-<form method="POST" action="/tweets/<%= @tweet.id %>"></form>
+<form method="POST" action="/tweets/<%= @tweet.id %>">
+  <label for="content">New Content: </label>
+</form>
