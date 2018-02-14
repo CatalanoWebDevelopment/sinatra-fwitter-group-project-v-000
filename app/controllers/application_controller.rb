@@ -110,8 +110,12 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  get '/tweets/:id/edit' do
+  delete '/tweets/:id/delete' do
     
+  end
+
+  get '/tweets/:id/edit' do
+
   end
 
   helpers do
