@@ -92,8 +92,7 @@ class ApplicationController < Sinatra::Base
     if logged_in?
       @tweet = Tweet.create(content: params[:content], user_id: current_user.id)
       binding.pry
-      if true
-
+      if @tweet.valid? == true
         erb :'/tweets/show_tweet'
       else
         redirect '/tweets/new'
