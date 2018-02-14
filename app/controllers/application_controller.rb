@@ -119,6 +119,8 @@ class ApplicationController < Sinatra::Base
 
   get '/tweets/:id/edit' do
     if logged_in?
+      @tweet = Tweet.find_by_id(params[:id])
+
 
   end
 
