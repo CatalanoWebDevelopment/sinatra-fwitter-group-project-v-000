@@ -56,7 +56,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/tweets' do
-    binding.pry
     if logged_in?
       @user = User.find(session[:user_id])
       @tweets = Tweet.all
