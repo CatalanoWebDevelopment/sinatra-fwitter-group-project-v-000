@@ -126,6 +126,14 @@ class ApplicationController < Sinatra::Base
     end
   end
 
+  patch '/tweet/:id' do
+    @tweet = Tweet.find_by_id(params[:id])
+    @tweet.update(content: params[:content])
+    @tweet.save
+
+    redirect '/tweets'
+  end
+
   helpers do
     def logged_in?
       !!session[:user_id]
