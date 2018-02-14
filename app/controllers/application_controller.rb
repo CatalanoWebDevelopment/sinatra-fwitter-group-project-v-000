@@ -80,7 +80,7 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  def '/tweet/new' do
+  def '/tweets/new' do
     if logged_in?
       erb :'/tweets/new'
     else
