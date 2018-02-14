@@ -135,8 +135,6 @@ class ApplicationController < Sinatra::Base
     else
       redirect '/tweets/<%= @tweet.id %>/edit'
     end
-
-    
   end
 
   helpers do
